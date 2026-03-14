@@ -1,6 +1,6 @@
 #!/bin/bash
 
 echo "Please enter your USER Name"
-read -s USER_Name # here USER_Name is variable
+read USER_Name # here USER_Name is variable
 
 echo "USER entered is: $USER_Name"
