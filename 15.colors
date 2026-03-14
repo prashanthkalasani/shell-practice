@@ -24,21 +24,23 @@ dnf list installed mysql
 #Installed if it is not found
 if [ $? -ne 0 ]; then
     yum install mysql -y
-VALIDATE $? "MYSQL"
+    VALIDATE $? "MYSQL"
 else
-    echo "MYSQL already exist ... $Y SKIPPING $N"
+    echo -e "MYSQL already exist ... $Y SKIPPING $N"
 fi
+
 dnf list installed nginx
 if [ $? -ne 0 ]; then
     yum install nginx -y
-VALIDATE $? "Nginx"
+    VALIDATE $? "Nginx"
 else
-    echo "nginx already exist ... $Y SKIPPING $N"
+    echo -e "nginx already exist ... $Y SKIPPING $N"
 fi
+
 dnf list install python3
 if [ $? -ne 0 ]; then
     dnf install python3 -y
-VALIDATE $? "python3"
+    VALIDATE $? "python3"
 else
-    echo "python3 already exist ... $Y SKIPPING $N"
+    echo -e "python3 already exist ... $Y SKIPPING $N"
 fi
