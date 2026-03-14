@@ -20,7 +20,7 @@ yum install mysql -y
 VALIDATE $? "MYSQL"
 
 yum install nginx -y
-VALIDATE$? "Nginx"
+VALIDATE $? "Nginx"
 
 dnf install python3 -y
 VALIDATE $? "python3"
